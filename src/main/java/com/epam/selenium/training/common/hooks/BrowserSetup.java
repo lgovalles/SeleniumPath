@@ -1,5 +1,6 @@
-package com.epam.selenium.training.common;
+package com.epam.selenium.training.common.hooks;
 
+import com.epam.selenium.training.common.BaseClass;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
