@@ -4,7 +4,10 @@ import com.epam.selenium.training.common.BaseClass;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
+import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -16,6 +19,7 @@ public class BrowserSetup extends BaseClass {
     public static void setupDriver(){
         WebDriverManager.chromedriver().setup();
         WebDriverManager.firefoxdriver().setup();
+
     }
 
     @Before
@@ -38,7 +42,18 @@ public class BrowserSetup extends BaseClass {
     }
 
     @After
-    public void teardown(){
+    public void teardown(Scenario scenario){
+        try{
+            String screenshotName = scenario.getName().replaceAll(" ","");
+            if(scenario.isFailed()){
+                scenario.log("This is my failure message");
+                TakesScreenshot ts = (TakesScreenshot)driver;
+                byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
+                scenario.attach(screenshot,"image/png",screenshotName);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         driver.quit();
     }
 }
