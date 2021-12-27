@@ -20,6 +20,11 @@ npm install
 1. Log-in with valid username and password.
 2. Log-in with incorrect username and incorrect password.
 
+## Reports 
+ExtentReport Adapter 
+URL: https://ghchirp.tech/3196/
+![ScreenShot](./src/test/resources/Img/ReportExample.png)
+
 ## Contributing
 
 ## License
