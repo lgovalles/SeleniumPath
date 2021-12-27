@@ -39,6 +39,7 @@ public class MainMenu extends BaseClass {
     public void NavigateBack(){
         driver.navigate().back();
     }
+
     public void NavigateTo(){
         driver.get(baseURL);
     }

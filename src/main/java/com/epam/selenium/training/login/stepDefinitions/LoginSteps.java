@@ -1,7 +1,6 @@
 package com.epam.selenium.training.login.stepDefinitions;
 
 
-import com.epam.selenium.training.common.pages.MainMenu;
 import com.epam.selenium.training.login.pageobject.LoginPage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;

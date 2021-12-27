@@ -1,18 +1,16 @@
 package com.epam.selenium.training.common.steps;
 
-
-import com.epam.selenium.training.common.pages.MainMenu;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
+import com.epam.selenium.training.common.pages.*;
 
 public class MainSteps {
 
     private MainMenu menu;
 
     public MainSteps() {
-        this.menu = new MainMenu();
+        menu = new MainMenu();
     }
 
     @Given("I am the main page")
