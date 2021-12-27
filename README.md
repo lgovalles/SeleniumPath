@@ -30,6 +30,11 @@ npm install
 7. Login-Handles case sensitive
 8. Login-Authentication
 
+## Reports 
+ExtentReport Adapter 
+URL: https://ghchirp.tech/3196/
+![ScreenShot](./src/test/resources/Img/ReportExample.png)
+
 ## Contributing
 
 ## License

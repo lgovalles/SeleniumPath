@@ -9,7 +9,8 @@ Feature: Login functionality
       |Test_Pas_Love$|
     Then The main page should be open
 
-    Scenario Outline: "<ID>" User and Password validation
+
+    Scenario Outline: <ID> User and Password validation
       And Type the user "<user>" and the pass "<password>"
       Then The system should show the error "<error>"
       Examples:
